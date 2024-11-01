@@ -1,5 +1,5 @@
 {
-  "name": "@shardus/debug-tool",
+  "name": "@shardeum-foundation/debug-tool",
   "version": "1.0.2",
   "description": "Shardus application debugging tools.",
   "main": "index.js",
@@ -40,5 +40,9 @@
     "normalize-url": "4.5.1",
     "got": "11.8.5",
     "semver": "5.7.2 || 6.3.1 || 7.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shardeum/tools-shardus-cli-debugger"
   }
 }
