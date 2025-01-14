@@ -1,6 +1,6 @@
 {
   "name": "@shardeum-foundation/tools-shardus-cli-debugger",
-  "version": "1.0.3-prerelease.0",
+  "version": "1.0.3",
   "description": "Shardus application debugging tools.",
   "main": "index.js",
   "scripts": {
