@@ -4,7 +4,7 @@ const got = require('got')
 const tar = require('tar')
 
 // From: https://stackoverflow.com/a/21196961
-function ensureExists (dir) {
+function ensureExists(dir) {
   return new Promise((resolve, reject) => {
     fs.mkdir(dir, { recursive: true }, (err) => {
       if (err) {
@@ -20,11 +20,11 @@ function ensureExists (dir) {
   })
 }
 
-function streamExtractFile (url, savePath, progressFn) {
+function streamExtractFile(url, savePath, progressFn) {
   return new Promise((resolve, reject) => {
     const download = got.stream(url, { decompress: false })
     download.on('error', reject)
-    download.on('downloadProgress', progress => {
+    download.on('downloadProgress', (progress) => {
       const normalized = path.normalize(path.relative(process.cwd(), savePath))
       progressFn({ url, savePath: normalized, ...progress })
     })
