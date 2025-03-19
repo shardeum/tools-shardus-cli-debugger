@@ -8,7 +8,6 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint",
-    "format-check": "prettier --check '**.js'",
     "compile": "tsc -p .",
     "prepare": "npm run compile",
     "release:prepatch": "npm run prepare && npm version prepatch --preid=prerelease && git push --follow-tags && npm publish --tag prerelease",
@@ -17,7 +16,9 @@
     "release:prerelease": "npm run prepare && npm version prerelease --preid=prerelease && git push --follow-tags && npm publish --tag prerelease",
     "release:patch": "npm run prepare && npm version patch && git push --follow-tags && npm publish",
     "release:minor": "npm run prepare && npm version minor && git push --follow-tags && npm publish",
-    "release:major": "npm run prepare && npm version major && git push --follow-tags && npm publish"
+    "release:major": "npm run prepare && npm version major && git push --follow-tags && npm publish",
+    "format-check": "prettier --check \"**/*.{js,jsx,ts,tsx,json}\"",
+    "format-fix": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\""
   },
   "bin": {
     "shardus-debug": "./bin/index.js"
